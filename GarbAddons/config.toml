@@ -1,0 +1,29 @@
+
+[general]
+	kicknotifier = "69d 4h 2m 0s"
+	hotdog_toppings = 0
+
+	[general.general]
+		kick_notifier = "69d 4h 2m 0s"
+
+	[general.guild]
+		pro_joined = 0.0
+
+	[general.bridge]
+		pro_joined = 0.0
+
+	[general.utilities]
+		kicknotifier = "wtf i was kicked from skyblock?? bro wtf????? hypixel fix server bro????"
+		kick_notifier = "IVE BEEN KICKED!!!! https://i.imgur.com/Gh6v8Pz.png"
+		hotdog_toppings = 1
+
+[custom]
+
+	[custom."use_\"custom\"_ban_options_in_config_for_it_to_work"]
+		perm_ban_or_temp = "Skill issues"
+		ban_reason = "Skill issues"
+		ban_time = "69d 4h 2m 0s"
+
+[config]
+	ban_time = 0
+
