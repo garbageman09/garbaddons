@@ -1,28 +1,31 @@
-import { @Vigilant, @ButtonProperty,  @SelectorProperty,  @TextProperty,@SwitchProperty } from 'Vigilance';
+import { @Vigilant, @ButtonProperty,  @SelectorProperty,  @TextProperty,@SwitchProperty, @SliderProperty} from 'Vigilance';
 
-@Vigilant("GarbAddons","GarbageAddons :3")
+@Vigilant("GarbAddons","§2§lGarbAddons §d§l:3")
 class Settings {
-  @SelectorProperty({
-      name: 'Hotdog Toppings',
-      description: 'Select a Hotdog Topping',
-      category: 'General',
-      subcategory: 'Utilities',
-      options: ['Ketchup', 'Mustard'],
+ 
+   @TextProperty({
+     name: "Kick Notifier",
+     description: "Notifies party when kicked",
+     category: "General"
   })
-  Topping = 0;
-  @TextProperty({
-      name: 'Kick Notifier',
-      description: 'Sends custom message in party chat when kicked &4this is a chat macro',
-      category: 'General',
-      subcategory: 'Utilities',
-      placeholder: 'Empty... :(',
-      triggerActionOnInitialization: false,
-  })
-  kickMsg = 0;
-    constructor() {
-        this.initialize(this);
-        this.setCategoryDescription('General', "&5&k&r &dGarbAddons by the_garbageman09 &5&k&r \n&2DM ogmudbone. on &9&lDiscord&r&2 for problems.&r\n &f&o not like i will ever fix this is just for fun")
-    }
+   kickMsg = '';
+   @SwitchProperty({
+      name: "Party Commands",
+      description: "Funny Party Commands /garb list to see them all",
+      category: "General",
+   })
+   PartyCommands = 0;
+   @TextProperty({
+      name: "PB",
+      description: "Put PB here for .PB command (Only if you have Party Commands Enabled)",
+      category: "General",
+   })
+   PB = '1:05';
+  
+   constructor() {
+     this.initialize(this);
+     this.setCategoryDescription('General', "&5&k&r &dGarbAddons by the_garbageman09 &5&k&r \n&2DM ogmudbone. on &9&lDiscord&r&2 for problems.&r\n &f&o not like i will ever fix this is just for fun")
+   }
 }
 
 export default new Settings();
